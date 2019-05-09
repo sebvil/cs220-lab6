@@ -10,7 +10,7 @@ compiler: gcc
 
 jobs:
   include:
-    - stage: compile
-      script: make -C lab6/hello clean all
     - stage: test
-      script: ./lab6/hello/hello 
+      script:
+       - make -C lab6/hello clean all
+       - ./lab6/hello/hello 
