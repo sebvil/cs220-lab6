@@ -1,0 +1,16 @@
+dist: xenial
+
+branches:
+  only:
+  - master
+
+language: c
+
+compiler: gcc
+
+jobs:
+  include:
+    - stage: compile
+      script: make -C lab6/hello clean all
+    - stage: test
+      script: ./lab6/hello/hello 
